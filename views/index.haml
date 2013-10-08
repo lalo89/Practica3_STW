@@ -1,10 +1,26 @@
-%html{:lang => "es"}
+%html
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}
-    %title Rock, Paper, Scissors
+    %title Practica 3_STW
   %body
-    .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        .container
-          %center
-            %h1 Rock, Paper, Scissors
+    %ol
+      %h3 Choose one of the following:
+      %a{:href => '?choice=rock'} Rock
+      %a{:href => '?choice=paper'} Paper
+      %a{:href => '?choice=scissors'} Scissors
+
+
+      %h2 Player 
+      - if(player_throw == 'rock')
+        
+      - elsif (player_throw == 'scissors')
+      - elsif (player_throw == 'paper')
+
+      %h2 vs
+      
+      %h2 Computer
+      - if(computer_throw == 'rock')
+      - elsif (computer_throw == 'scissors')
+      - elsif (computer_throw == 'paper')
+    
+      %h3= answer
