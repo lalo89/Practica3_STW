@@ -1,5 +1,6 @@
 require 'rack/request'
 require 'rack/response'
+require 'haml'
  
 module RockPaperScissors
   class App 
@@ -22,7 +23,7 @@ module RockPaperScissors
       
       computer_throw = @throws.sample
       player_throw = req.GET["choice"]
-      anwser = if !@throws.include?(player_throw)
+      answer = if !@throws.include?(player_throw)
           "Choose one of the following:"
         elsif player_throw == computer_throw
           "You tied with the computer"
@@ -32,19 +33,17 @@ module RockPaperScissors
           "Ouch; #{computer_throw} beats #{player_throw}. Better luck next time!"
         end
 	
-#       engine = Haml::Engine.new File.open("views/index.haml").read
+      engine = Haml::Engine.new File.open("views/index.haml").read
+      
       res = Rack::Response.new
-      res.write <<-"EOS"
-      <html>
-        <title>Practica 3_STW</title>
-        <body>
-          <h1>
-              #{anwser}
-              #{@choose}
-          </h1>
-        </body>
-      </html>
-      EOS
+      
+      res.write engine.render(
+	{},
+	:answer => answer,
+	:choose => @choose,
+	:throws => @throws,
+        :computer_throw => computer_throw,
+	:player_throw => player_throw)
       res.finish
     end # call
   end   # App
