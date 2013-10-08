@@ -35,7 +35,7 @@ module RockPaperScissors
       res = Rack::Response.new
       res.write <<-"EOS"
       <html>
-        <title>rps</title>
+        <title>Practica 3_STW</title>
         <body>
           <h1>
               #{anwser}
