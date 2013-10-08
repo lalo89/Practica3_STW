@@ -31,7 +31,8 @@ module RockPaperScissors
         else
           "Ouch; #{computer_throw} beats #{player_throw}. Better luck next time!"
         end
-
+	
+#       engine = Haml::Engine.new File.open("views/index.haml").read
       res = Rack::Response.new
       res.write <<-"EOS"
       <html>
