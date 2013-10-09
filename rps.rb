@@ -45,6 +45,7 @@ module RockPaperScissors
         :computer_throw => computer_throw,
 	:player_throw => player_throw)
       res.finish
+      
     end # call
   end   # App
 end     # RockPaperScissors
