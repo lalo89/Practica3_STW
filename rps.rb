@@ -10,10 +10,6 @@ module RockPaperScissors
       @content_type = :html
       @defeat = {'rock' => 'scissors', 'paper' => 'rock', 'scissors' => 'paper'}
       @throws = @defeat.keys
-      @choose = @throws.map { |x| 
-        %Q{ <li><a href="/?choice=#{x}">#{x}</a></li> }
-      }.join("\n")
-      @choose = "<p>\n<ul>\n#{@choose}\n</ul>"
     end
 
     def call(env)
@@ -40,7 +36,6 @@ module RockPaperScissors
       res.write engine.render(
 	{},
 	:answer => answer,
-	:choose => @choose,
 	:throws => @throws,
         :computer_throw => computer_throw,
 	:player_throw => player_throw)
