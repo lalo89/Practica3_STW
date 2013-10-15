@@ -1,14 +1,35 @@
-%html
+!!!
+%html{lang: "en"}
   %head
-    %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}
-    %title Practica 3_STW
+    %meta{charset: "utf-8"}/
+    %title Comning soon page: bootstrap free templates
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "bootstrappage.com", name: "author"}/
+    / Bootstrap style
+    %link{href: "public/assets/css/bootstrap.min.css", rel: "stylesheet"}/
+    %link{href: "public/assets/css/comingsoon.css", rel: "stylesheet"}/
+    / Bootstrap style responsive
+    %link{href: "public/assets/css/bootstrap-responsive.min.css", rel: "stylesheet"}/
   %body
-    %center
-      %h3 Choose one of the following:
-      %a{:href => '?choice=rock'} Rock
-      %a{:href => '?choice=paper'} Paper
-      %a{:href => '?choice=scissors'} Scissors
-
-      %h2 Player vs Computer
-    
-      %h3= answer
+    %br/
+    %br/
+    %br/
+    %br/
+    .comingsoonBlk
+      %h1 Rock, Paper and Scissors
+      %h3
+        Choose one of the following:
+        %br/
+      .socialMedia
+        %a{"data-original-title" => "Rock", "data-placement" => "top", href: "#"}
+          %img{alt: "Rock", src: "assets/img/facebook.png", style: "width:45px", title: "Rock"}/
+        %a{"data-original-title" => "Paper", "data-placement" => "top", href: "#"}
+          %img{alt: "Paper", src: "assets/img/twitter.png", style: "width:45px", title: "Paper"}/
+        %a{"data-original-title" => "Scissors", "data-placement" => "top", href: "#"}
+          %img{alt: "Scissors", src: "assets/img/youtube.png", style: "width:45px", title: "Scissors"}/
+      %h3
+        = answer
+        %h3
+          %br.clr/
+    .copyright Eduardo Delgado Álvarez © 2013.
