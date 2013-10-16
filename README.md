@@ -2,9 +2,9 @@ Sistemas y Tecnologías Web
 ==========================
 Eduardo Delgado Álvarez
 
-Práctica 3: Añadir Template Haml y CSS con Bootstrap a Rock, Paper, Scissors
+Práctica 4: Añadir Template Haml y CSS con Bootstrap a Rock, Paper, Scissors
 -----------------------------------------------------------------------------
-La práctica consiste en usar Haml para crear un template "index.haml" en un directorio "views" para aplicárselo a la aplicación Rock, Paper, Scissors.
+La práctica consiste en usar Haml para crear un template "index.haml" en un directorio "views" para aplicárselo a la aplicación Rock, Paper, Scissors. También crearemos un directorio "public" en el que se colocarán las imágenes y el estilo de la aplicación.
 
 Instrucciones
 -------------
