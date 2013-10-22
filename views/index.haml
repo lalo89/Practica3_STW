@@ -13,9 +13,6 @@
     %link{href: "public/assets/css/bootstrap-responsive.min.css", rel: "stylesheet"}/
   %body
     %br/
-    %br/
-    %br/
-    %br/
     .comingsoonBlk
       %h1 Rock, Paper and Scissors
       %h3
@@ -30,6 +27,14 @@
           %img{alt: "Scissors", src: "public/img/tijeras.jpg", style: "width:85px", title: "Scissors"}/
       %h3
         = answer
-        %h3
-          %br.clr/
+      %h3
+        Victorias
+        = plays['wins']
+      %h3
+        Derrotas
+        = plays['defeats']
+      %h3 
+        Empates
+        = plays['ties']
+
     .copyright Eduardo Delgado Álvarez © 2013.

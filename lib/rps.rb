@@ -9,6 +9,7 @@ module RockPaperScissors
       @app = app
       @content_type = :html
       @defeat = {'rock' => 'scissors', 'paper' => 'rock', 'scissors' => 'paper'}
+      @plays = {'wins' => 0, 'defeats' => 0, 'ties' => 0}
       @throws = @defeat.keys
     end
 
@@ -22,10 +23,13 @@ module RockPaperScissors
       answer = if !@throws.include?(player_throw)
           "Choose one of the following:"
         elsif player_throw == computer_throw
+	  @plays['ties'] = @plays['ties'] + 1
           "You tied with the computer"
         elsif computer_throw == @defeat[player_throw]
+	  @plays['wins'] = @plays['wins'] + 1
           "Nicely done; #{player_throw} beats #{computer_throw}"
         else
+	  @plays['defeats'] = @plays['defeats'] + 1
           "Ouch; #{computer_throw} beats #{player_throw}. Better luck next time!"
         end
 	
@@ -33,8 +37,11 @@ module RockPaperScissors
       
       res = Rack::Response.new
       
+      res.set_cookie("cookie", {:value => @plays, :path => "/", :expire => Time.now+24*60*60})
+      
       res.write engine.render(
 	{},
+	:plays => @plays,
 	:answer => answer,
 	:throws => @throws,
         :computer_throw => computer_throw,
