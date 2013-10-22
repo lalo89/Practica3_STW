@@ -16,4 +16,9 @@ class RPSApp_Test < Test::Unit::TestCase
     assert last_response.ok?
   end
   
+  def test_rock
+    get "/?choice=rock"
+    assert last_response.ok?
+  end
+  
 end
