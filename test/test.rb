@@ -30,4 +30,9 @@ class RPSApp_Test < Test::Unit::TestCase
     get "/?choice=scissors"
     assert last_response.ok?
   end
+  
+  def test_body
+    get "/"
+    assert last_response.body.include? ("Rock, Paper and Scissors")
+  end
 end
