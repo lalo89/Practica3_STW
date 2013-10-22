@@ -23,6 +23,7 @@ module RockPaperScissors
       
       computer_throw = @throws.sample
       player_throw = req.GET["choice"]
+        
       answer = if !@throws.include?(player_throw)
           "Choose one of the following:"
         elsif player_throw == computer_throw
