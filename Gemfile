@@ -4,7 +4,7 @@ gem 'rack'
 gem 'thin'
 gem 'haml'
 
-group :desarrollo do
+group :development do
   gem 'rack'
   gem 'thin'
   gem 'haml'
