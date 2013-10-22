@@ -21,4 +21,8 @@ class RPSApp_Test < Test::Unit::TestCase
     assert last_response.ok?
   end
   
+  def test_paper
+    get "/?choice=paper"
+    assert last_response.ok?
+  end
 end
