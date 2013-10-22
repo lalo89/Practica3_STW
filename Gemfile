@@ -9,3 +9,8 @@ group :desarrollo do
   gem 'thin'
   gem 'haml'
 end
+
+group :test do
+  gem 'rspec'
+  gem 'rack-test'
+end
