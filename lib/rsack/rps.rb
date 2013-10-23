@@ -16,7 +16,7 @@ module RockPaperScissors
     def call(env)
       req = Rack::Request.new(env) 
       
-      req.env.keys.sort.each { |x| puts "#{x} => #{req.env[x]}" }
+#       req.env.keys.sort.each { |x| puts "#{x} => #{req.env[x]}" }
       
       computer_throw = @throws.sample
       player_throw = req.GET["choice"]
