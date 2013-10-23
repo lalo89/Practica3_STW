@@ -4,7 +4,7 @@ Eduardo Delgado Álvarez
 
 Práctica 5: Añadir pruebas unitarias a Rock, Paper, Scissors
 -----------------------------------------------------------------------------
-La práctica consiste en usar Haml para crear un template "index.haml" en un directorio "views" para aplicárselo a la aplicación Rock, Paper, Scissors. También crearemos un directorio "public" en el que se colocarán las imágenes y el estilo de la aplicación.
+La práctica consiste en añadir pruebas unitarias en el directorio "tests" para aplicárselo a la aplicación Rock, Paper, Scissors. También crearemos una cookie que almacenará las partidas del jugador, contando así sus Victorias, Derrotas y Empates contra la máquina.
 
 Instrucciones
 -------------
