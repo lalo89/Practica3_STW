@@ -19,6 +19,7 @@ Instrucciones
 3. Una vez allí introducimos una jugada y observamos el resultado.
 
 
+
 ---
  
 Escuela Técnica Superior de Ingeniería Informática  

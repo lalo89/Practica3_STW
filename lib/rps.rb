@@ -37,7 +37,9 @@ module RockPaperScissors
       
       res = Rack::Response.new
       
-      res.set_cookie("cookie", {:value => @plays, :path => "/", :expire => Time.now+24*60*60})
+      res.set_cookie("cookie_wins", {:value => @plays['wins'], :path => "/", :expire => Time.now+24*60*60})
+      res.set_cookie("cookie_defeats", {:value => @plays['defeats'], :path => "/", :expire => Time.now+24*60*60})
+      res.set_cookie("cookie_ties", {:value => @plays['ties'], :path => "/", :expire => Time.now+24*60*60})
       
       res.write engine.render(
 	{},
