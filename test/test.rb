@@ -1,6 +1,7 @@
 require "test/unit"
-require "./lib/rps"
+require "rsack"
 require "rack/test"
+require "pp"
 
 class RPSApp_Test < Test::Unit::TestCase
   include Rack::Test::Methods
@@ -29,6 +30,7 @@ class RPSApp_Test < Test::Unit::TestCase
   def test_scissors
     get "/?choice=scissors"
     assert last_response.ok?
+    pp last_response
   end
   
   def test_body
