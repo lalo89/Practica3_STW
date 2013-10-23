@@ -18,7 +18,12 @@ task :scissors do
   sh %q{curl -v 'http://localhost:8080?choice=scissors'}
 end
 
-desc "ejecutando los test"
+desc "ejecutando los tests"
 task :test do
   sh "ruby -Ilib -Itest test/test.rb"
+end
+
+desc "ejecutando rspec"
+task :spec do
+  sh "rspec -Ilib -Ispec spec/RPS_spec/app_spec.rb"
 end
