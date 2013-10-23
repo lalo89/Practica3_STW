@@ -12,5 +12,11 @@ describe RockPaperScissors::App do
 	   response = server.get('/')
 	   response.status.should == 200
 	 end
+	 
+	 it "Debería mostrar Practica 5" do 
+           response = server.get('/')
+           response.header == 'Practica 5'
+         end
+	 
        end
 end
